@@ -22,31 +22,34 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 
 print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.")
-name = input("What is the name of the great traveller?: ")
+print("The goal of all travellers on this island is to find the treasure.")
+name = input("\nWhat is the name of the great traveller?:\n").capitalize()
 
 # Monster name
-if name == "morgan" or name == "Morgan" or name == "MORGAN":
+if name == "Morgan":
     monster = "Pickle Morgan"
 else:
-    monster = "Wild Morgan"
+    monster = "a Wild Morgan"
 
 # Choices
-crossroad = input(f"{name} is at a cross road, they can either go left or right, what way did {name} go? ")
-if crossroad == "left" or crossroad == "Left" or crossroad == "LEFT":
+crossroad = input(f"{name} is at a cross road, they can either go left or right, what way will {name} go?\n").lower()
+if crossroad == "left":
     swim = input(f"{name} arrived at a lake. There is a small island in the middle of the lake. "
-                 f"What did {name} decide? did they wait for a boat or swim across? ")
+                 f"What will {name} decide? wait for a boat or swim across?\n").lower()
 
-    if swim == "wait" or swim == "Wait" or swim == "WAIT":
-        door = input(f"After waiting a boat arrived and took {name} to the island ")
+    if swim == "wait":
+        door = input(f"After waiting a boat arrived and took {name} to the island. "
+                     f"On the island there are three doors side by side, one is Red, one is Yellow,"
+                     f" and the other is blue. What door should {name} choose to open?\n").lower()
 
-        if door == "yellow" or door == "Yellow" or door == "YELLOW":
-            print(f"{name} found the treasure and lived like royalty until the end of their days.")
+        if door == "yellow":
+            print(f"\n{name} opened the door and a treasure chest magically appeared from out of nowhere! "
+                  f"{name} lived like royalty until the end of time.")
         else:
-            print(f"{name} died after being attacked by a {monster}.")
+            print(f"{name} died after being attacked by {monster}.")
 
     else:
-        print(f"{name} died after being attacked by a {monster}.")
+        print(f"{name} died after being attacked by {monster}.")
 
 else:
-    print(f"{name} died after being attacked by a {monster}.")
+    print(f"{name} died after being attacked by {monster}.")
