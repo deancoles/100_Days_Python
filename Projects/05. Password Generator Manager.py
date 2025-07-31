@@ -24,7 +24,7 @@ for char in range(0, nr_symbols):
 
 # Loop through characters in the range between 0 and input
 for char in range(0, nr_symbols):
-    # Add symbol to password
+    # Add number to password
     password += random.choice(numbers)
 
 # Create variable for password in list format
